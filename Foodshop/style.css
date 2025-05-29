@@ -1,0 +1,362 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Theme Variables */
+:root {
+  --bg-color: #fefefe;
+  --text-color: #111;
+  --accent-color: #ff6347;
+  --hover-color: #e9533f;
+  --header-bg: #ff6347;
+  --nav-bg: #333;
+  --menu-border: #b03a2e;
+  --menu-header: #f39c12;
+  --menu-alt: #fcf3cf;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --header-bg: #222;
+  --nav-bg: #111;
+}
+
+body {
+  font-family: 'Ubuntu Mono', monospace;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header */
+header {
+  margin-top: 15px;
+  text-align: center;
+  background-color: var(--header-bg);
+  color: white;
+  padding: 20px 0;
+}
+
+/* Titles */
+#top {
+  font-size: 46px;
+  color: rgb(245, 10, 10);
+}
+
+#top1 {
+  font-size: 21px;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--nav-bg);
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+#navbar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+#navcontent {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+  padding-top: 5px;
+}
+
+#navcontent li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+#navcontent li a:hover,
+#navcontent li a.active {
+  background-color: var(--accent-color);
+}
+
+/* Hero Section */
+#container1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 63vh;
+  margin-top: 15px;
+}
+
+#container1::before {
+  content: '';
+  background: url("https://media.geeksforgeeks.org/wp-content/uploads/20240711124309/8513909_3941598-(2).jpg") no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 59vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.89;
+  border: 2px solid black;
+  border-bottom-left-radius: 100px;
+}
+
+#row1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 35px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn, .order-btn {
+  background-color: yellow;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  border: 3px solid white;
+  border-radius: 15px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover, .order-btn:hover {
+  background-color: var(--hover-color);
+  color: white;
+}
+
+/* Boxes Section */
+#container3 {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#row2, #row3 {
+  width: 24vw;
+  height: 21vh;
+  margin: 51px 0;
+  box-shadow: 2px 7px 16px 5px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Featured Products */
+#top3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#container4 {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 900px;
+  margin: 15px auto;
+}
+
+#row4, #row5, #row6 {
+  width: 18vw;
+  height: 22vh;
+  box-shadow: 2px 7px 16px 5px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact Form */
+#ContactUs {
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+#ContactUs h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-shape {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-shape label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-shape input,
+.form-shape select,
+.form-shape textarea {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#radio {
+  margin: 10px 0 20px;
+  font-weight: bold;
+}
+
+#radio label {
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 48%;
+  margin: 5px 1%;
+  font-weight: bold;
+}
+
+/* About Us */
+#about-us {
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+/* Menu Section */
+#menu-section {
+  width: 90%;
+  margin: 50px auto;
+}
+
+#menu-section h2 {
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#menu-section h3 {
+  margin-top: 30px;
+  color: var(--menu-border);
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--menu-border);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.menu-table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.menu-table th,
+.menu-table td {
+  border: 1px solid var(--menu-border);
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.menu-table th {
+  background-color: var(--menu-header);
+  color: white;
+}
+
+.menu-table tr:nth-child(even) {
+  background-color: var(--menu-alt);
+}
+
+/* Visual Menu Items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #fff;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.menu-item:hover {
+  transform: scale(1.01);
+}
+
+.menu-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  color: #555;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid #ccc;
+}
+
+body.dark-mode footer {
+  background-color: #222;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #navcontent {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .toggle-mode-btn {
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+  }
+}
